@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Formularz kontaktowy</title>
+        <meta name="description" content="Dynamicznie sprzawdzany i wysyłany formularz kontaktowy">
+        <link href="style.css" rel="stylesheet" type="text/css" media="all" />
+    </head>
+
+    <body>
+        
+<form class="form" id="contactForm" method="post" action="send-scripts.php">
+    <div class="form-row">
+        <label for="field-name">Name*</label>
+        <input type="text" name="name" required id="field-name" data-error="Wypełnij to pole" pattern="[a-zA-ZąĄććęęłŁńŃóÓśŚżŻŹŹ]+">
+    </div>
+    <div class="form-row">
+        <label for="field-email">Email*</label>
+        <input type="email" name="email" required id="field-email" data-error="Wpisz poprawny email" pattern="[^@\s]+@[^@\s]+\.[^@\s]+">
+    </div>
+    <div class="form-row">
+        <label for="field-message">Message*</label>
+        <textarea name="message" required data-error="Musisz wypełnić pole" id="field-message" pattern=".+"></textarea>
+    </div>
+    <div class="form-row">
+        <label class="checkbox-cnt">
+            <input type="checkbox" data-error="Musisz wypełnić pole" name="regulation">
+            <i class="state" aria-hidden="true"></i>
+            <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In libero arcu, vulputate sit amet mattis sit amet, ultrices in erat. Aenean suscipit arcu ac lorem lacinia ut scelerisque turpis commodo.</span>
+        </label>
+    </div>
+    <div class="form-row">
+        <button type="submit" class="submit-btn">
+            Wyślij
+        </button>
+    </div>
+</form>
+
+        <script src="script.js" type="text/javascript"></script>
+    </body>
+</html>
